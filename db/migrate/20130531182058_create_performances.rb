@@ -1,4 +1,4 @@
-class CreatePerformances < ActiveRecord::Migration
+class CreatePerformances < ActiveRecord::Migration[5.1]
   def change
     create_table :performances do |t|
       t.integer :user_id

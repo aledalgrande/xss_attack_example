@@ -1,4 +1,4 @@
-class CreateKeyManagements < ActiveRecord::Migration
+class CreateKeyManagements < ActiveRecord::Migration[5.1]
   def change
     create_table :key_managements do |t|
       t.string :iv

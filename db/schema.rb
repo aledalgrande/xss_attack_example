@@ -13,105 +13,105 @@
 ActiveRecord::Schema.define(version: 20140408185601) do
 
   create_table "analytics", force: :cascade do |t|
-    t.string   "ip_address"
-    t.string   "referrer"
-    t.string   "user_agent"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string "ip_address"
+    t.string "referrer"
+    t.string "user_agent"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "benefits", force: :cascade do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "key_managements", force: :cascade do |t|
-    t.string   "iv"
-    t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string "iv"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "messages", force: :cascade do |t|
-    t.integer  "creator_id"
-    t.integer  "receiver_id"
-    t.text     "message"
-    t.boolean  "read"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.integer "creator_id"
+    t.integer "receiver_id"
+    t.text "message"
+    t.boolean "read"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "paid_time_offs", force: :cascade do |t|
-    t.integer  "user_id"
-    t.integer  "sick_days_taken"
-    t.integer  "sick_days_earned"
-    t.integer  "pto_taken"
-    t.integer  "pto_earned"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.integer "user_id"
+    t.integer "sick_days_taken"
+    t.integer "sick_days_earned"
+    t.integer "pto_taken"
+    t.integer "pto_earned"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "pays", force: :cascade do |t|
-    t.integer  "user_id"
-    t.string   "bank_account_num"
-    t.string   "bank_routing_num"
-    t.integer  "percent_of_deposit"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.integer "user_id"
+    t.string "bank_account_num"
+    t.string "bank_routing_num"
+    t.integer "percent_of_deposit"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "performances", force: :cascade do |t|
-    t.integer  "user_id"
-    t.date     "date_submitted"
-    t.integer  "score"
-    t.string   "comments"
-    t.integer  "reviewer"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.integer "user_id"
+    t.date "date_submitted"
+    t.integer "score"
+    t.string "comments"
+    t.integer "reviewer"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "retirements", force: :cascade do |t|
-    t.string   "total"
-    t.string   "employee_contrib"
-    t.string   "employer_contrib"
-    t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string "total"
+    t.string "employee_contrib"
+    t.string "employer_contrib"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "schedules", force: :cascade do |t|
-    t.string   "event_type"
-    t.date     "date_begin"
-    t.date     "date_end"
-    t.string   "event_name"
-    t.string   "event_desc"
-    t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string "event_type"
+    t.date "date_begin"
+    t.date "date_end"
+    t.string "event_name"
+    t.string "event_desc"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "email"
-    t.string   "password"
-    t.boolean  "admin"
-    t.string   "first_name"
-    t.string   "last_name"
-    t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "auth_token"
+    t.string "email"
+    t.string "password"
+    t.boolean "admin"
+    t.string "first_name"
+    t.string "last_name"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "auth_token"
   end
 
   create_table "work_infos", force: :cascade do |t|
-    t.integer  "user_id"
-    t.string   "income"
-    t.string   "bonuses"
-    t.integer  "years_worked"
-    t.string   "SSN"
-    t.date     "DoB"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.binary   "encrypted_ssn"
+    t.integer "user_id"
+    t.string "income"
+    t.string "bonuses"
+    t.integer "years_worked"
+    t.string "SSN"
+    t.date "DoB"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.binary "encrypted_ssn"
   end
 
 end

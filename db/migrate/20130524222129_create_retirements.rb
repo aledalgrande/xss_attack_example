@@ -1,4 +1,4 @@
-class CreateRetirements < ActiveRecord::Migration
+class CreateRetirements < ActiveRecord::Migration[5.1]
   def change
     create_table :retirements do |t|
       t.string :total

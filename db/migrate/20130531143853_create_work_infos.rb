@@ -1,4 +1,4 @@
-class CreateWorkInfos < ActiveRecord::Migration
+class CreateWorkInfos < ActiveRecord::Migration[5.1]
   def change
     create_table :work_infos do |t|
       t.integer :user_id

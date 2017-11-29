@@ -1,4 +1,4 @@
-class CreatePays < ActiveRecord::Migration
+class CreatePays < ActiveRecord::Migration[5.1]
   def change
     create_table :pays do |t|
       t.integer :user_id

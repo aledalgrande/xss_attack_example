@@ -1,4 +1,4 @@
-class CreateAnalytics < ActiveRecord::Migration
+class CreateAnalytics < ActiveRecord::Migration[5.1]
   def change
     create_table :analytics do |t|
       t.string		:ip_address

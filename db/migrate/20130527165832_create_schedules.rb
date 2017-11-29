@@ -1,4 +1,4 @@
-class CreateSchedules < ActiveRecord::Migration
+class CreateSchedules < ActiveRecord::Migration[5.1]
   def change
     create_table :schedules do |t|
       t.string :event_type
